@@ -18,6 +18,10 @@ app.get('/main', function(req, res) {
   res.render('index');
 });
 
-app.listen(port, portIP, function() {
+// app.listen(port, portIP, function() {
+//   console.log("Server has started..");
+// });
+
+app.listen(process.env.port, process.env.IP, function() {
   console.log("Server has started..");
-});
+})
