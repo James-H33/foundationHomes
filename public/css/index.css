@@ -54,11 +54,12 @@
   width: 22%;
   display: inline-block;
   padding: 1em;
-  min-width: 250px; }
+  min-width: 300px; }
 
 .galleryCol img {
   width: 100%;
-  min-height: 250px; }
+  min-height: 320px;
+  min-width: 300px; }
 
 .thirdContainer {
   width: 100%;
