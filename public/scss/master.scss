@@ -67,6 +67,29 @@ a, a:hover {
   color: $brand-color;
 }
 
+// JQuery Scroll
+.scrollToTop{
+	width:20px;
+	height:20px;
+	padding:10px;
+	text-align:center;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	position:fixed;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px black;
+	bottom:75px;
+	right:40px;
+	display:none;
+  background: #fff;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+	color: #000;
+}
+
+
 
 
 @media (min-width: 769px) {
