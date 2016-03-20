@@ -18,7 +18,7 @@
 
 .introDisplay h1 {
   font-family: "Poiret One", Arial;
-  letter-spacing: 5px; }
+  letter-spacing: 3px; }
 
 .introDisplay p {
   font-size: 20px;
@@ -89,6 +89,10 @@
   font-size: 20px; }
 
 @media (min-width: 769px) {
+  .introDisplay h1 {
+    font-family: "Poiret One", Arial;
+    letter-spacing: 5px; }
+
   .thirdDisplay {
     width: 50%;
     display: flex;
