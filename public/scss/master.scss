@@ -1,0 +1,112 @@
+$font-stack: 'Poiret One', Arial;
+$navbar-li-font-size: 20px;
+$brand-color: #000;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: gray;
+}
+
+// Navbar
+
+.navbarContainer {
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+  clear: both;
+}
+.navbarBrand {
+  float: left;
+  font-family: $font-stack;
+  color: $brand-color;
+  font-size: 15px;
+  font-weight: 300;
+  padding-left: 5px;
+  letter-spacing: 8px;
+}
+
+.navbarBrand span {
+  color: red;
+}
+
+.navbarButton {
+  font-size: 18px;
+  float: right;
+  background: #fff;
+  border: none;
+  margin: 15px 5px 0 0;
+  padding: 8px;
+  display: block;
+  outline-color: #fff;
+}
+
+.navbarList {
+  display: none;
+  font-family: $font-stack;
+  padding: 0;
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+}
+
+
+.navbarContainer li {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: $navbar-li-font-size;
+}
+
+.navbarContainer a {
+  color: $brand-color;
+}
+
+
+
+@media (min-width: 769px) {
+
+
+  // Navbar
+
+  .navbarContainer {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    clear: both;
+  }
+  .navbarBrand {
+    float: left;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .navbarButton {
+    float: right;
+    background: #fff;
+    border: none;
+    margin: 18px 15px 0 0;
+    padding: 8px;
+    display: none;
+  }
+
+  .navbarList {
+    width: auto;
+    float: right;
+    height: auto;
+    padding: 1em;
+    display: inline-block;
+    clear: none;
+  }
+
+  .navbarContainer li {
+    display: inline-block;
+    padding: 0 15px;
+  }
+
+}
