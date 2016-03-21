@@ -70,13 +70,35 @@ $overlay-color: rgba(0, 0, 0, 0.6);
   width: 22%;
   display: inline-block;
   padding: 1em;
+  position: relative;
   min-width: 300px;
+  overflow: hidden;
 }
 
 .galleryCol img {
   width: 100%;
   min-height: 320px;
   min-width: 300px;
+}
+
+// overlay display card
+
+.infoCard {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  height: 80%;
+  top: 100%;
+  bottom: 0;
+}
+
+.infoCardShow {
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    height: 80%;
+    top: none;
+    bottom: 0;
 }
 
 // Third Section
@@ -132,5 +154,6 @@ $overlay-color: rgba(0, 0, 0, 0.6);
     color: gray;
     clear: both;
   }
+
 
 }

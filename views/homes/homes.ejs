@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+<link rel="stylesheet" href="/css/homes.css" media="screen">
+
+<div class="homesContainer">
+  <div class="homesDisplay">
+    <% home.forEach(function(prop) { %>
+      <div class="thumbnail">
+        <div class="col">
+          <img src="<%= prop.image %>" alt="" />
+        </div>
+        <div class="col info">
+          <h1><%= prop.name %></h1>
+          <h2>
+            <%= prop.location %>
+          </h2>
+          <h2>
+            <%= prop.price %>
+          </h2>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
+
+
+<% include ../partials/footer %>

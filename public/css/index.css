@@ -54,12 +54,30 @@
   width: 22%;
   display: inline-block;
   padding: 1em;
-  min-width: 300px; }
+  position: relative;
+  min-width: 300px;
+  overflow: hidden; }
 
 .galleryCol img {
   width: 100%;
   min-height: 320px;
   min-width: 300px; }
+
+.infoCard {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  height: 80%;
+  top: 100%;
+  bottom: 0; }
+
+.infoCardShow {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  height: 80%;
+  top: none;
+  bottom: 0; }
 
 .thirdContainer {
   width: 100%;

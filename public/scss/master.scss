@@ -83,8 +83,9 @@ a, a:hover {
 	right:40px;
 	display:none;
   background: #fff;
+  z-index: 100;
 }
-.scrollToTop:hover{
+.scrollToTop:hover {
 	text-decoration:none;
 	color: #000;
 }
