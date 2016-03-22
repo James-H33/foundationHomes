@@ -1,4 +1,5 @@
 $font-stack: 'Poiret One', Arial;
+$primary-color: #b71c1c;
 
 body {
   background: #e5e5e5;
@@ -31,8 +32,23 @@ body {
 }
 
 .submit {
-  background: #3a5795;
+  background: $primary-color;
   border: none;
+  color: #fff;
+}
+
+.register {
+  display: block;
+  width: 80%;
+  height: 30px;
+  margin: 5px auto;
+  border-radius: 4px;
+  background: $primary-color;
+  color: #fff;
+  text-align: center;
+}
+
+.register a {
   color: #fff;
 }
 
@@ -44,7 +60,7 @@ body {
     height: 400px;
     margin: 50px auto;
     text-align: center;
-    box-shadow: 0 0 5px gray;
+    // box-shadow: 0 0 5px gray;
     font-family: $font-stack;
   }
   .formContainer h1 {
@@ -63,9 +79,9 @@ body {
     border-radius: 4px;
   }
 
-  .submit {
-    background: #3a5795;
-    border: none;
-    color: #fff;
+  .register {
+    width: 50%;
   }
+
+
 }
