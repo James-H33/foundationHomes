@@ -1,6 +1,8 @@
 $font-stack: 'Poiret One', Arial;
 $navbar-li-font-size: 20px;
 $brand-color: #000;
+$footer-color: #a3a3a3;
+$footer-backgroundColor: #444;
 
 body {
   margin: 0;
@@ -90,6 +92,33 @@ a, a:hover {
 	color: #000;
 }
 
+// Footer
+
+.footer {
+  background: $footer-backgroundColor;
+  width: 100%;
+  height: 150px;
+  font-size: 30px;
+}
+
+.footer ul {
+  text-align: center;
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.footer li {
+  display: inline-block;
+  padding: 0 15px;
+  color: $footer-color;
+}
+
+.footer p {
+  font-size: 20px;
+  text-align: center;
+  color: $footer-color;
+}
 
 
 

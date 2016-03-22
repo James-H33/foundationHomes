@@ -1,14 +1,23 @@
-var express     = require('express');
-var app         = express();
-var mongoose    = require('mongoose');
-var bodyParser  = require('body-parser');
-var Homes       = require('./models/homes');
-var seedDB      = require('./seeds');
+var express       = require('express');
+var app           = express();
+var bodyParser    = require('body-parser');
+var mongoose      = require('mongoose');
+var passport      = require('passport');
+var localStrategy = require('passport-local');
+var Homes         = require('./models/homes');
+var Realtors      = require('./models/realtors');
+var User          = require('./models/user');
+var seedDB        = require('./seeds');
 
 
 // Ports
 var port    = process.env.PORT || 27017;
 var portIP  = process.env.IP;
+
+// Routes
+var homesRoutes   = require('./routes/homesRoute');
+var indexRoutes    = require('./routes/indexRoute');
+var realtorsRoutes = require('./routes/realtorsRoute');
 
 
 // mongoose.connect('mongodb://localhost/foundation_homes');
@@ -20,23 +29,29 @@ app.use(express.static(__dirname + '/public'));
 seedDB();
 
 
-app.get('/', function(req, res) {
-  res.redirect('/main');
+//Passport Configuration
+app.use(require('express-session')({
+  secret: "Some Secret",
+  resave: false,
+  saveUninitialized: false
+}));
+
+// Checks for a user on every route(.locals). next(); keeps the code moving
+app.use(function(req, res, next){
+  res.locals.user = req.user;
+  next();
 });
 
-app.get('/main', function(req, res) {
-  res.render('index');
-});
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
-app.get('/homes', function(req, res) {
-  Homes.find({}, function(err, homes) {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render('homes/homes', {home: homes});
-    }
-  });
-});
+app.use(homesRoutes);
+app.use(indexRoutes);
+app.use(realtorsRoutes);
+
 
 app.listen(port, portIP, function() {
   console.log("Server has started..");

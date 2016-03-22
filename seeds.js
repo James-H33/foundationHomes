@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Homes = require('./models/homes');
+var Realtors = require('./models/realtors');
 
 var data = [
   {
@@ -22,8 +23,32 @@ var data = [
   },
   {
     name: "Casser Town",
+    location: "Tampa, FL",
+    price: "288,000",
+    image: "http://agbeat.com/wp-content/uploads/2012/07/house-for-sale.jpg"
+  },
+  {
+    name: "Rampton City",
     location: "Florida",
     price: "288,000",
+    image: "http://agbeat.com/wp-content/uploads/2012/07/house-for-sale.jpg"
+  },
+  {
+    name: "Casser Town",
+    location: "Georgia",
+    price: "708,000",
+    image: "http://agbeat.com/wp-content/uploads/2012/07/house-for-sale.jpg"
+  },
+  {
+    name: "Kurts Villa",
+    location: "Punta Gorda, FL",
+    price: "1,000,000",
+    image: "http://agbeat.com/wp-content/uploads/2012/07/house-for-sale.jpg"
+  },
+  {
+    name: "Wrong Turn",
+    location: "Dead End",
+    price: "1,000",
     image: "http://agbeat.com/wp-content/uploads/2012/07/house-for-sale.jpg"
   }
 ]
@@ -47,5 +72,11 @@ function seedDB() {
     }
   });
 }
+
+var relProfiles = [
+  {
+    
+  },
+]
 
 module.exports = seedDB;

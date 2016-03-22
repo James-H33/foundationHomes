@@ -56,12 +56,13 @@
   padding: 1em;
   position: relative;
   min-width: 300px;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #fff; }
 
 .galleryCol img {
   width: 100%;
-  min-height: 320px;
-  min-width: 300px; }
+  height: 300px;
+  min-width: 280px; }
 
 .infoCard {
   width: 100%;
@@ -85,15 +86,16 @@
   background: url("https://phenomenale.files.wordpress.com/2015/10/1.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  margin-bottom: 50px; }
 
 .thirdDisplay {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
   background: rgba(250, 250, 250, 0.9);
   float: right;
   color: gray;
@@ -108,9 +110,16 @@
   font-size: 20px; }
 
 @media (min-width: 769px) {
+  .galleryList {
+    width: 90%;
+    margin: 0 auto; }
+
   .introDisplay h1 {
     font-family: "Poiret One", Arial;
     letter-spacing: 5px; }
+
+  .middleDisplayOne {
+    margin-bottom: 30px; }
 
   .thirdDisplay {
     width: 50%;
@@ -119,7 +128,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    background: rgba(250, 250, 250, 0.9);
+    background: rgba(250, 250, 250, 0.95);
     float: right;
     color: gray;
     clear: both; } }

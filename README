@@ -1,2 +1,21 @@
-Sass Code for chnages to CSS
-  sass --watch scss:css
+Foundation Homes
+
+The aim of this website is to exercise my knowledge of making a complete node app.
+  Includes:
+    Users and Associations of User Content.
+    RESTful Routes.
+    Organized filing system.
+    Google Cards Design.
+
+
+
+
+
+
+
+Notes:
+
+  Sass Code for chnages to CSS
+    sass --watch scss:css
+
+  Check Dependencies for installed file.

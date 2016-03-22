@@ -1,0 +1,123 @@
+$font-stack: 'Poiret One', Arial;
+
+body {
+  font-family: $font-stack;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profileContainer {
+  width: 100%;
+  background: #e5e5e5;
+}
+
+.profileContainer hr {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profileContainer h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.profileContainer p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+
+.profileDisplay {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.profileDisplay img {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  padding-top: 1em;
+  margin: 0 auto;
+}
+
+.profileDisplay a {
+  font-size: 30px;
+}
+
+.profileDisplay li {
+  width: 100%;
+  display: block;
+  background: #fff;
+  margin: 1em auto;
+}
+
+.col {
+  width: 100%;
+}
+
+.profileContent {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width: 769px) {
+
+  .profileContainer {
+    width: 100%;
+    background: #e5e5e5;
+  }
+
+  .profileContainer h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+    margin: 0;
+  }
+
+  .profileDisplay {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .profileDisplay img {
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    padding: 1em;
+    margin: 0 auto;
+  }
+
+  .profileDisplay li {
+    width: 100%;
+    display: flex;
+    background: #fff;
+    margin: 1em auto;
+  }
+
+  .col {
+    width: 45%;
+  }
+
+  .profileContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}

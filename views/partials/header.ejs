@@ -18,8 +18,14 @@
         <ul class="navbarList">
           <li><a href="/main">Main</a></li>
           <li><a href="/homes">Homes</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="/realtors">Realtors</a></li>
+          <% if(!user) { %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Sign Up</a></li>
+          <%  } else { %>
+            <li><a href="/users">User</a></li>
+            <li><a href="/users">logout</a></li>
+            <% } %>
         </ul>
     </div>
 
