@@ -3,7 +3,23 @@ var router = express.Router();
 var Realtors = require('../models/realtors');
 
 router.get('/realtors', function(req, res ) {
-  res.render('realtors/realtors');
+  Realtors.find({}, function(err, realtors) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('realtors/realtors', {realtor: realtors, user: req.user});
+    }
+  });
+});
+
+router.get('/realtors/:id', isLoggedIn, function(req, res) {
+  Realtors.findById(req.params.id, function(err, foundRealtor) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('realtors/realtorsProfile', {realtor: foundRealtor, user: req.user})
+    }
+  });
 });
 
 // Middleware

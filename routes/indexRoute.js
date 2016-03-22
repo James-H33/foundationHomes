@@ -46,7 +46,11 @@ router.post('/login', passport.authenticate('local', {
   successRedirect: '/main',
   failureRedirect: '/login'
 }), function(req, res){
+});
 
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/main');
 });
 
 // Middleware

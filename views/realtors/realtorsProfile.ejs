@@ -1,3 +1,17 @@
 <% include ../partials/header %>
+<div class="profileContainer">
+  <div class="profileDisplay">
+    <div class="">
+      <img src="<%= realtor.rImage %>" alt="Photo of Realtor"/>
+    </div>
+    <div class="">
+      <h1>  <%= realtor.rName %></h1>
+
+      <p>
+        <%= realtor.rAbout %>
+      </p>
+    </div>
+  </div>
+</div>
 
 <% include ../partials/footer %>

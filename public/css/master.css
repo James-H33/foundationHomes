@@ -16,14 +16,14 @@ a, a:hover {
 .navbarBrand {
   float: left;
   font-family: "Poiret One", Arial;
-  color: #000;
+  color: gray;
   font-size: 15px;
   font-weight: 300;
   padding-left: 5px;
   letter-spacing: 5px; }
 
 .navbarBrand span {
-  color: red; }
+  color: #b71c1c; }
 
 .navbarButton {
   font-size: 18px;
@@ -50,7 +50,7 @@ a, a:hover {
   font-size: 20px; }
 
 .navbarContainer a {
-  color: #000; }
+  color: gray; }
 
 .scrollToTop {
   width: 20px;

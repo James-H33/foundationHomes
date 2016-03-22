@@ -23,8 +23,8 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Sign Up</a></li>
           <%  } else { %>
-            <li><a href="/users">User</a></li>
-            <li><a href="/users">logout</a></li>
+            <li><a href="/users"><%= user.username %></a></li>
+            <li><a href="/logout">logout</a></li>
             <% } %>
         </ul>
     </div>

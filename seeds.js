@@ -73,10 +73,51 @@ function seedDB() {
   });
 }
 
-var relProfiles = [
+var rProfiles = [
   {
-    
+    rName: "James Hall",
+    rImage: "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png",
+    rAbout: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
   },
+  {
+    rName: "Kyle Daughtry",
+    rImage: "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-plaid-shirt-guy.png",
+    rAbout: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  },
+  {
+    rName: "Rosetta Stone",
+    rImage: "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-short-hair-girl.png",
+    rAbout: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  },
+  {
+    rName: "Wait a second..",
+    rImage: "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-ponsy-deer.png",
+    rAbout: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  }
 ]
 
-module.exports = seedDB;
+function seedProfiles() {
+  Realtors.remove({}, function(err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Removed Profile");
+      rProfiles.forEach(function(profiles) {
+        Realtors.create(profiles, function(err, profile) {
+          if (err) {
+            console.log(err);
+          } else {
+            profile.save();
+          }
+        });
+      });
+    }
+  });
+}
+
+function mainSeed() {
+  seedDB();
+  seedProfiles();
+}
+
+module.exports = mainSeed;

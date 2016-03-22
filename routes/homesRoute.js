@@ -8,7 +8,7 @@ router.get('/homes', function(req, res) {
     if(err) {
       console.log(err);
     } else {
-      res.render('homes/homes', {home: homes});
+      res.render('homes/homes', {home: homes, user: req.user});
     }
   });
 });

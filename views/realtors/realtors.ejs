@@ -1,4 +1,5 @@
 <% include ../partials/header %>
+
 <link rel="stylesheet" href="/css/realtors.css" type="text/css">
 
 <div class="profileContainer">
@@ -6,56 +7,22 @@
   <hr>
   <div class="profileDisplay">
     <ul>
+
+    <% realtor.forEach(function(profile) { %>
       <li>
         <div class="profileImage col">
-          <img src="http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png" alt="Profile Picture">
+          <img src="<%= profile.rImage %>" alt="Profile Picture">
         </div>
 
         <div class="profileContent col">
-          <h1><a href="#">James Hall</a></h1>
+          <h1><a href="/realtors/<%= profile._id %>"><%= profile.rName %></a></h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            <%= profile.rAbout %>
           </p>
         </div>
       </li>
+    <% }); %>
 
-      <li>
-        <div class="profileImage col">
-          <img src="http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-plaid-shirt-guy.png" alt="Profile Picture">
-        </div>
-
-        <div class="profileContent col">
-          <h1><a href="#">Kyle Daughtry</a></h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
-        </div>
-      </li>
-
-      <li>
-        <div class="profileImage col">
-          <img src="http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-short-hair-girl.png" alt="Profile Picture">
-        </div>
-
-        <div class="profileContent col">
-          <h1><a href="#">Rosetta Stone</a></h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.          </p>
-        </div>
-      </li>
-
-      <li>
-        <div class="profileImage col">
-          <img src="http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-ponsy-deer.png" alt="Profile Picture">
-        </div>
-
-        <div class="profileContent col">
-          <h1><a href="#">Wait a second...</a></h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
-        </div>
-      </li>
     </ul>
   </div>
 </div>

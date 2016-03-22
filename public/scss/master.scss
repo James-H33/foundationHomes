@@ -1,6 +1,7 @@
 $font-stack: 'Poiret One', Arial;
 $navbar-li-font-size: 20px;
-$brand-color: #000;
+$link: gray;
+$primary-color: #b71c1c;
 $footer-color: #a3a3a3;
 $footer-backgroundColor: #444;
 
@@ -26,7 +27,7 @@ a, a:hover {
 .navbarBrand {
   float: left;
   font-family: $font-stack;
-  color: $brand-color;
+  color: $link;
   font-size: 15px;
   font-weight: 300;
   padding-left: 5px;
@@ -34,7 +35,7 @@ a, a:hover {
 }
 
 .navbarBrand span {
-  color: red;
+  color: $primary-color;
 }
 
 .navbarButton {
@@ -66,7 +67,7 @@ a, a:hover {
 }
 
 .navbarContainer a {
-  color: $brand-color;
+  color: $link;
 }
 
 // JQuery Scroll
