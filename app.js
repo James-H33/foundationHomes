@@ -22,8 +22,8 @@ var realtorsRoutes = require('./routes/realtorsRoute');
 var commentsRoutes = require('./routes/commentsRoute');
 
 
-mongoose.connect('mongodb://localhost/foundation_homes');
-// mongoose.connect('mongodb://retsbud:String33@ds015508.mlab.com:15508/foundation_homes');
+// mongoose.connect('mongodb://localhost/foundation_homes');
+mongoose.connect('mongodb://retsbud:String33@ds015508.mlab.com:15508/foundation_homes');
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
