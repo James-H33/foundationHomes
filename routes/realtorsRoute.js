@@ -13,7 +13,7 @@ router.get('/realtors', function(req, res ) {
 });
 
 router.get('/realtors/:id', isLoggedIn, function(req, res) {
-  Realtors.findById(req.params.id, function(err, foundRealtor) {
+  Realtors.findById(req.params.id).populate('comments').exec(function(err, foundRealtor) {
     if (err) {
       console.log(err);
     } else {

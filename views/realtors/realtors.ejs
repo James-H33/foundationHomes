@@ -11,13 +11,13 @@
     <% realtor.forEach(function(profile) { %>
       <li>
         <div class="profileImage col">
-          <img src="<%= profile.rImage %>" alt="Profile Picture">
+          <img src="<%= profile.image %>" alt="Profile Picture">
         </div>
 
         <div class="profileContent col">
-          <h1><a href="/realtors/<%= profile._id %>"><%= profile.rName %></a></h1>
+          <h1><a href="/realtors/<%= profile._id %>"><%= profile.name %></a></h1>
           <p>
-            <%= profile.rAbout %>
+            <%= profile.about %>
           </p>
         </div>
       </li>

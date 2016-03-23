@@ -7,6 +7,7 @@ var localStrategy = require('passport-local');
 var Homes         = require('./models/homes');
 var Realtors      = require('./models/realtors');
 var User          = require('./models/user');
+var Comment       = require('./models/comments');
 var seedDB        = require('./seeds');
 
 
@@ -18,10 +19,11 @@ var portIP  = process.env.IP;
 var homesRoutes   = require('./routes/homesRoute');
 var indexRoutes    = require('./routes/indexRoute');
 var realtorsRoutes = require('./routes/realtorsRoute');
+var commentsRoutes = require('./routes/commentsRoute');
 
 
-// mongoose.connect('mongodb://localhost/foundation_homes');
-mongoose.connect('mongodb://retsbud:String33@ds015508.mlab.com:15508/foundation_homes');
+mongoose.connect('mongodb://localhost/foundation_homes');
+// mongoose.connect('mongodb://retsbud:String33@ds015508.mlab.com:15508/foundation_homes');
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -51,9 +53,10 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use(homesRoutes);
-app.use(indexRoutes);
+app.use('/', homesRoutes);
+app.use('/', indexRoutes);
 app.use(realtorsRoutes);
+app.use(commentsRoutes);
 
 
 app.listen(port, portIP, function() {

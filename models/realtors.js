@@ -1,10 +1,17 @@
 var mongoose = require('mongoose');
 
 var realtorsSchema = new mongoose.Schema({
-  rName: String,
-  rImage: String,
-  rAbout: String,
-  rComments: [
+  name: String,
+  image: String,
+  about: String,
+  author: {
+      id: {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "User"
+      },
+      username: String
+   },
+  comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Comment"

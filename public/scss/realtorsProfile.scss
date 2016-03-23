@@ -1,0 +1,74 @@
+@import "var";
+
+body {
+  background: $main-backgroundColor;
+}
+
+.profileContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.profileDisplay {
+ width: 90%;
+ margin: 30px auto;
+ padding: 1em;
+ background: #fff;
+
+ img {
+   width: 100%;
+   max-width: 600px;
+ }
+}
+
+.img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info {
+  width: 90%;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+  }
+
+}
+
+.comments {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+@media (min-width: 769px) {
+
+
+  .profileContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  .profileDisplay {
+   width: 80%;
+   margin: 30px auto;
+   padding: 1em;
+   background: #fff;
+}
+
+.info {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.comments {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+
+}

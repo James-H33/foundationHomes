@@ -1,16 +1,38 @@
 <% include ../partials/header %>
+<link rel="stylesheet" href="/css/realtorsProfile.css" media="screen" title="no title" charset="utf-8">
+
 <div class="profileContainer">
   <div class="profileDisplay">
-    <div class="">
-      <img src="<%= realtor.rImage %>" alt="Photo of Realtor"/>
+    <div class="img">
+      <img src="<%= realtor.image %>" alt="Photo of Realtor"/>
     </div>
-    <div class="">
-      <h1>  <%= realtor.rName %></h1>
+    <div class="info">
+      <h1>  <%= realtor.name %></h1>
 
       <p>
-        <%= realtor.rAbout %>
+        <%= realtor.about %>
       </p>
     </div>
+
+    <div class="comments">
+      <h3>Comments</h3>
+      <hr>
+      <div class="eachComment">
+        <h4>Username</h4>
+        <p>
+          One of the best realtors I have had the pleasure of working with.
+        </p>
+
+        <% realtor.comments.forEach(function(user){ %>
+          <h4> <%= user.author.username %> </h4>
+          <p>
+          <%= user.text %>
+          </p>
+        <% }); %>
+        <button><a href="/realtors/<%= realtor._id %>/comments/new">Comment</a></button>
+      </div>
+    </div>
+
   </div>
 </div>
 
