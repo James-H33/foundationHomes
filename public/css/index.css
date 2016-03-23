@@ -81,7 +81,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: initial; }
 
 .thirdDisplay {
   width: 100%;
@@ -148,6 +148,15 @@ button {
 
   .middleDisplayOne {
     margin-bottom: 30px; }
+
+  .thirdContainer {
+    width: 100%;
+    height: 500px;
+    background: url("http://static1.squarespace.com/static/53ff083fe4b06d598893dcdf/53ff0e11e4b075777f4f4f0d/547f5483e4b0a7c95f779139/1450008344588/Mirror+Houses+back+day.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
 
   .thirdDisplay {
     width: 100%;
